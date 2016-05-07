@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
+@extends('layout.base')
+
+@section('head')
     <title>Roman numerals converter</title>
+@endsection
 
-    <link href='https://fonts.googleapis.com/css?family=Lato:100,400,300,700,900' rel='stylesheet' type='text/css'>
-
-    <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/app.css') }}"/>
-    <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>
-</head>
-<body>
-<div class="container">
+@section('content')
     <section class="header">
         <h1>Roman numerals converter</h1>
     </section>
@@ -52,9 +47,5 @@
                 </ul>
             @endif
         </div>
-
     </section>
-</div>
-</body>
-</html>
-
+@endsection

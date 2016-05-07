@@ -16,6 +16,9 @@ The purpose of this application was to create a simple project based on Laravel 
 - Includes PHPUnit tests. Placed in `tests/ConverterTest.php` and run by typing `vendor/bin/phpunit`
 - Project structure was made using Laravel installer
 
+#### Frontend
+The theme is built using gulp, elixir ans scss. It's designed with simplicity in mind. Blade templates are split into multiple files.
+
 ### Use Case
 
 - When submitted the form should display both the integer and roman numeral
