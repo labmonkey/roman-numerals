@@ -28,10 +28,6 @@ class HistoryController extends BaseController {
 		$history->number = $request->number;
 		$history->save();
 
-		$converter = new Converter();
-
-		$number = $converter->toRomanNumerals( $request->number );
-
-		return redirect( route( 'home', array( 'number' => $number ) ) );
+		return redirect( route( 'home', array( 'number' => $request->number ) ) );
 	}
 }

@@ -22,7 +22,7 @@
         {!! Form::text('number') !!}
         {!! Form::submit('Submit') !!}
         {!! Form::close() !!}
-        <span>@if (isset($number)){!! $number !!}@endif</span>
+        <span>@if (isset($roman)){!! $roman !!}@endif</span>
         @if (count($history) > 0)
             <ul>
                 @foreach ($history as $item)

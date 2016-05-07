@@ -14,7 +14,7 @@ class ConverterTest extends TestCase {
 	 * @return void
 	 */
 	public function testExample() {
-		$tests     = array(
+		$tests = array(
 			1      => 'I',
 			5      => 'V',
 			10     => 'X',
@@ -28,11 +28,8 @@ class ConverterTest extends TestCase {
 		$converter = new Converter();
 
 		foreach ( $tests as $number => $roman ) {
-			$this->assertEquals( $roman, $converter->toRomanNumerals( $number ) );
-
-			$this->visit( '/' )
-			     ->type( $number, 'number' )
-			     ->press( 'Submit' );
+			$result = $converter->convert( $number );
+			$this->assertEquals( $roman, $result );
 		}
 	}
 }

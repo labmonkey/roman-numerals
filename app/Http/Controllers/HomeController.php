@@ -28,7 +28,8 @@ class HomeController extends BaseController {
 
 		if ( $request->number ) {
 			$converter      = new Converter();
-			$data['number'] = $converter->toRomanNumerals( $request->number );
+			$data['number'] = $request->number;
+			$data['roman']  = $converter->toRomanNumerals( $request->number );
 		}
 
 		return view( 'converter', $data );
