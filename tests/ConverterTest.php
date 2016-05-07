@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use App\Libraries\Converter;
 
 class ConverterTest extends TestCase {
 	use DatabaseTransactions;
@@ -13,7 +14,7 @@ class ConverterTest extends TestCase {
 	 * @return void
 	 */
 	public function testExample() {
-		$tests = array(
+		$tests     = array(
 			1      => 'I',
 			5      => 'V',
 			10     => 'X',
@@ -24,11 +25,14 @@ class ConverterTest extends TestCase {
 			'ABCD' => false
 		);
 
-		foreach ( $tests as $numer => $roman ) {
+		$converter = new Converter();
+
+		foreach ( $tests as $number => $roman ) {
+			$this->assertEquals( $roman, $converter->toRomanNumerals( $number ) );
+
 			$this->visit( '/' )
-			     ->type( $numer, 'number' )
-			     ->press( 'Submit' )
-			     ->seePageIs( '/' );
+			     ->type( $number, 'number' )
+			     ->press( 'Submit' );
 		}
 	}
 }
