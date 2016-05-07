@@ -18,7 +18,17 @@
 <body>
 <div class="container">
     <div class="content">
-
+        {!! Form::open(array('url' => '/history')) !!}
+        {!! Form::text('number') !!}
+        {!! Form::submit('Click Me!') !!}
+        {!! Form::close() !!}
+        @if (count($history) > 0)
+            <ul>
+                @foreach ($history as $item)
+                    <li>{{ $item->number }}</li>
+                @endforeach
+            </ul>
+        @endif
     </div>
 </div>
 </body>
