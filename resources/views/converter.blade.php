@@ -20,8 +20,9 @@
     <div class="content">
         {!! Form::open(array('url' => '/history')) !!}
         {!! Form::text('number') !!}
-        {!! Form::submit('Click Me!') !!}
+        {!! Form::submit('Submit') !!}
         {!! Form::close() !!}
+        <span>@if (isset($number)){!! $number !!}@endif</span>
         @if (count($history) > 0)
             <ul>
                 @foreach ($history as $item)
@@ -31,6 +32,20 @@
                     </li>
                 @endforeach
             </ul>
+        @endif
+        @if (count($errors) > 0)
+                <!-- Form Error List -->
+            <div class="alert alert-danger">
+                <strong>Whoops! Something went wrong!</strong>
+
+                <br><br>
+
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
         @endif
     </div>
 </div>
