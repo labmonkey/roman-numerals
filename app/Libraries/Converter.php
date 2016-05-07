@@ -14,7 +14,7 @@ use Symfony\Component\Translation\Translator;
 class Converter implements IntegerConversion {
 
 	public function convert( $number ) {
-		$factory = new ValidatorFactory(new Translator('en'));
+		$factory    = new ValidatorFactory( new Translator( 'en' ) );
 		$validation = $factory->make(
 			array(
 				'number' => $number
@@ -90,6 +90,7 @@ class Converter implements IntegerConversion {
 
 	function closest( $array, $number ) {
 		$ratio = 0.8;
+
 		end( $array );
 		$next = key( $array );
 		reset( $array );
@@ -103,7 +104,7 @@ class Converter implements IntegerConversion {
 			$prev = $key;
 		}
 
-		if ( $number / $next > $ratio ) {
+		if ( $number / $next >= $ratio ) {
 			return $next;
 		}
 
