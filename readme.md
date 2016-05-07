@@ -1,4 +1,6 @@
-# Roman numerals calculator
+![Screenshot](/screenshot.jpg?raw=true "Screenshot")
+
+# Roman numerals converter
 
 The purpose of this application was to create a simple project based on Laravel framework (PHP). This project is using all the basic and well known features of Laravel framework as well as MVC principles including:
 
