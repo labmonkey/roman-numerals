@@ -15,7 +15,7 @@ use App\History;
 use Illuminate\Http\Request;
 
 Route::get( '/', function () {
-	$history = History::orderBy( 'created_at', 'asc' )->get();
+	$history = History::orderBy( 'created_at', 'desc' )->get();
 
 	return view( 'converter', [
 		'history' => $history
