@@ -13,8 +13,7 @@
 
 Route::get( '/', [ 'as' => 'home', 'uses' => 'HomeController@index' ] );
 
-
 /**
- * Add New History
+ * Add New History item
  */
 Route::post( '/history', [ 'as' => 'history', 'uses' => 'HistoryController@convert' ] );

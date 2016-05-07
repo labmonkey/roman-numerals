@@ -25,3 +25,14 @@ The theme is built using gulp, elixir ans scss. It's designed with simplicity in
   values
 - Support numbers between 0 and 3999, only numeric characters
 - Display history of converted numbers along with creation time
+
+### Important custom files
+
+- `app/Http/routes.php`
+- `app/Http/Controllers`
+- `app/Http/Libraries`
+- `app/History.php`
+- `config/app.php` (Include Laravel Collective library Classes)
+- `resources/assets` (Sass, JS)
+- `resources/views` (Blade templates)
+- `tests/ConverterTest.php`

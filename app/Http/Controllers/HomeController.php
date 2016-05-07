@@ -19,6 +19,9 @@ use Illuminate\Http\Request;
 class HomeController extends BaseController {
 	use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;
 
+	/*
+	 * Displays the homepage
+	 */
 	function index( Request $request ) {
 		$history = History::orderBy( 'created_at', 'desc' )->get();
 
@@ -26,12 +29,14 @@ class HomeController extends BaseController {
 			'history' => $history
 		);
 
+		// If there was 'number' param then show both decimal and roman numbers in their fields
 		if ( $request->number ) {
 			$converter      = new Converter();
 			$data['number'] = $request->number;
 			$data['roman']  = $converter->toRomanNumerals( $request->number );
 		}
 
+		// used when converting numbers in template when displaying history
 		$data['converter'] = new Converter();
 
 		return view( 'converter', $data );

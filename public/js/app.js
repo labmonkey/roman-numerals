@@ -9845,6 +9845,7 @@ return jQuery;
 },{}],2:[function(require,module,exports){
 'use strict';
 
+// import jQuery via browserify
 window.$ = window.jQuery = require('jquery');
 
 },{"jquery":1}]},{},[2]);
