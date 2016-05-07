@@ -26,7 +26,7 @@
         @if (count($history) > 0)
             <ul>
                 @foreach ($history as $item)
-                    <li>{{ $item->number }} was converted to XXVII
+                    <li>{{ $item->number }} was converted to {{ $converter->toRomanNumerals($item->number) }}
                         {{ \Carbon\Carbon::now()->diffInMinutes($item->created_at) }}
                         minutes ago
                     </li>
