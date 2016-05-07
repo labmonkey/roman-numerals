@@ -1,2 +1,161 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+body, html {
+  min-height: 100%; }
+
+body {
+  background-image: linear-gradient(180deg, #f5b043 25%, #eb9950 100%);
+  background-image: -ms-linear-gradient(bottom, #f5b043 25%, #eb9950 100%); }
+
+.container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1064px;
+  margin: 0 auto;
+  padding: 0 20px; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 200; }
+
+.decimal-text, .roman-text {
+  border: 0;
+  background: transparent;
+  font-family: "Lato", sans-serif;
+  display: inline-block;
+  border-bottom: 0;
+  font-size: 70px;
+  color: white;
+  font-weight: 200;
+  box-shadow: 0 6px 10px -10px rgba(0, 0, 0, 0.47);
+  width: 100%;
+  text-align: center;
+  line-height: 1.6; }
+  .decimal-text:focus, .roman-text:focus {
+    border: 0;
+    outline: none; }
+
+.button-submit {
+  font-family: "Lato", sans-serif;
+  margin-top: 15px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: 200;
+  border: 1px solid #fff;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 20; }
+  .button-submit:before {
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    content: "";
+    background: #fff;
+    transition: all 0.3s ease;
+    z-index: -1; }
+  .button-submit:hover {
+    color: #eb9950;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 20;
+    box-shadow: none; }
+    .button-submit:hover:before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: all 0.3s ease; }
+
+section {
+  text-align: center;
+  color: white; }
+  section.header h1 {
+    font-size: 70px;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.47); }
+  section.form {
+    margin-bottom: 60px; }
+    section.form::after {
+      clear: both;
+      content: "";
+      display: table; }
+    section.form .roman, section.form .submitm .decimal {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 100%; }
+      section.form .roman:last-child, section.form .submitm .decimal:last-child {
+        margin-right: 0; }
+    @media screen and (min-width: 720px) {
+      section.form .roman {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 23.2317613015%; }
+        section.form .roman:last-child {
+          margin-right: 0; }
+      section.form .submit {
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 14.7019570017%; }
+        section.form .submit:last-child {
+          margin-right: 0; }
+      section.form .decimal {
+        margin-left: 17.0596085997%;
+        float: left;
+        display: block;
+        margin-right: 2.3576515979%;
+        width: 23.2317613015%; }
+        section.form .decimal:last-child {
+          margin-right: 0; } }
+  section.list .history {
+    float: left;
+    display: block;
+    margin-right: 2.3576515979%;
+    width: 48.821174201%;
+    margin-left: 25.5894128995%;
+    position: relative;
+    /*
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        background: -webkit-linear-gradient(to bottom, transparent, opacify($bg-dark, 0.1));
+        background: linear-gradient(to bottom, transparent, opacify($bg-dark, 0.1));
+      }
+      */ }
+    section.list .history:last-child {
+      margin-right: 0; }
+  section.errors {
+    font-size: 1.1em; }
+  section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    section ul li {
+      margin-bottom: 0.5em; }
+      section ul li span {
+        font-weight: 300; }
 
 /*# sourceMappingURL=app.css.map */

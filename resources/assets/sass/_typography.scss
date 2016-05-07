@@ -1,0 +1,27 @@
+body {
+  font-family: $font-main;
+  font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6 {
+
+}
+
+.decimal-text, .roman-text {
+  border: 0;
+  background: transparent;
+  font-family: $font-main;
+  display: inline-block;
+  border-bottom: 0;
+  font-size: 70px;
+  color: white;
+  font-weight: 200;
+  box-shadow: 0 6px 10px -10px rgba(0, 0, 0, 0.47);
+  width: 100%;
+  text-align: center;
+  line-height: 1.6;
+  &:focus {
+    border: 0;
+    outline: none;
+  }
+}

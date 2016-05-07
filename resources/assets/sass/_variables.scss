@@ -1,0 +1,10 @@
+$bg-light: lighten(#f39c12, 10%);
+$bg-dark: lighten(#e67e22, 10%);
+
+$font-main: 'Lato', sans-serif;
+
+$media-desktop-size: 1024px;
+$media-tablet-size: 720px;
+
+$media-desktop: new-breakpoint(min-width $media-desktop-size);
+$media-tablet: new-breakpoint(min-width $media-tablet-size);
