@@ -19,7 +19,7 @@
 <div class="container">
     <div class="content">
         {!! Form::open(array('url' => '/history')) !!}
-        {!! Form::text('number') !!}
+        {!! Form::text('number', isset($number) ? $number : '') !!}
         {!! Form::submit('Submit') !!}
         {!! Form::close() !!}
         <span>@if (isset($roman)){!! $roman !!}@endif</span>
@@ -32,9 +32,9 @@
                     </li>
                 @endforeach
             </ul>
-        @endif
-        @if (count($errors) > 0)
-                <!-- Form Error List -->
+            @endif
+            @if (count($errors) > 0)
+                    <!-- Form Error List -->
             <div class="alert alert-danger">
                 <strong>Whoops! Something went wrong!</strong>
 
