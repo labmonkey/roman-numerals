@@ -16,7 +16,8 @@ The purpose of this application was to create a simple project based on Laravel 
 - Includes PHPUnit tests. Placed in `tests/ConverterTest.php` and run by typing `vendor/bin/phpunit`
 - Project structure was made using Laravel installer
 
-#### Frontend
+### Frontend
+
 The theme is built using gulp, elixir ans scss. It's designed with simplicity in mind. Blade templates are split into multiple files.
 
 ### Use Case
@@ -25,6 +26,13 @@ The theme is built using gulp, elixir ans scss. It's designed with simplicity in
   values
 - Support numbers between 0 and 3999, only numeric characters
 - Display history of converted numbers along with creation time
+
+### Installation
+
+- Recommended development environment is [Homestead](https://laravel.com/docs/5.2/homestead)
+- `.env` file is required. You can copy `.env.example` (the one used by me)
+- `npm install` for required dependencies
+- `php artisan migrate` to create the database
 
 ### Important custom files
 
